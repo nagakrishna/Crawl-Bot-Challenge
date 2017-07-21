@@ -8,3 +8,5 @@ Challgenge given by [Clear Access IP](http://clearaccessip.com/) - Given a HTML 
 * With [Patentsview](http://www.patentsview.org/api/query-language.html) APIs, fetched patent's title, abstract and organization for each significant
 * To calculate the relavancy of fetched details with the give patent document, used cosine similarity - [Scikit Learn](http://scikit-learn.org/stable/)
 * Sorted the [results](https://github.com/nagakrishna/Crawl-Bot-Challenge/blob/master/data/output.txt) (Organization and Products) based on [Cosine Similarity Score](https://github.com/nagakrishna/Crawl-Bot-Challenge/blob/master/data/cosineSimilarityValues.txt)
+
+( note: Patent's with no organization name are named as null, Siginificant words were limited to 50)
