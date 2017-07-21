@@ -145,8 +145,14 @@ public class GetPatentDetails {
         StringBuilder sb = new StringBuilder();
         for (int i=0; i<array.length(); i++){
             JSONObject js = array.getJSONObject(i);
-            sb.append("\"" +js.get("assignee_organization") +"\"" + ": ");
-            sb.append(js.get("patent_title") + ",");
+            if (js.get("assignee_organization").equals("null")){
+                sb.append("\"" +js.get("assignee_organization") +"\"" + ": ");
+                sb.append(js.get("patent_title") + ",");
+            }
+            else {
+                sb.insert(0,js.get("patent_title") + ",");
+                sb.insert(0, "\"" +js.get("assignee_organization") +"\"" + ": ");
+            }
         }
         sb.setLength(sb.length() - 1);
         return sb.toString();
