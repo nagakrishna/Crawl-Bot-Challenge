@@ -6,7 +6,7 @@ Challgenge given by [Clear Access IP](http://clearaccessip.com/) - Given a HTML 
 * Used Standfords NLP library to perform Tokenization, Lemmatization and 
 extracted [Significant words](https://github.com/nagakrishna/Crawl-Bot-Challenge/blob/master/data/significantWords.txt) using Spark's Count Vectorizer
 * With [Patentsview](http://www.patentsview.org/api/query-language.html) APIs, fetched patent's title, abstract and organization for each significant
-* To calculate the relavancy of fetched details with the give patent document, used cosine similarity - [Scikit Learn](http://scikit-learn.org/stable/)
+* To calculate the relavancy of fetched details with the give patent document, used TF-IDF then Cosine similarity - [Scikit Learn](http://scikit-learn.org/stable/)
 * Sorted the [results](https://github.com/nagakrishna/Crawl-Bot-Challenge/blob/master/data/output.txt) (Organization and Products) based on [Cosine Similarity Score](https://github.com/nagakrishna/Crawl-Bot-Challenge/blob/master/data/cosineSimilarityValues.txt)
 
 ( note: Patent's with no organization name are named as null, Siginificant words were limited to 50)
