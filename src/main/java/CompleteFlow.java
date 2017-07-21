@@ -25,7 +25,7 @@ public class CompleteFlow {
         new PreProcess("data/input", "data/stopwords.txt", 2900000 ).start();
 
         //Getting products and brands for the significant words using Walmart Developer API
-        new GetCorpus();
+        new GetPatentDetails();
 
         //For cosine similarity making the single file having both input filtered text and products corpus details
         ClubDocs();
@@ -89,7 +89,7 @@ public class CompleteFlow {
 
     public static void ClubDocs() throws IOException {
         BufferedReader br1 = new BufferedReader(new FileReader(new File("data/input/filteredInput.txt")));
-        BufferedReader br2 = new BufferedReader(new FileReader(new File("data/productsCorpus.txt")));
+        BufferedReader br2 = new BufferedReader(new FileReader(new File("data/patentsCorpusAbstract.txt")));
         String line="";
         StringBuilder sb = new StringBuilder();
         while ((line=br1.readLine())!=null){

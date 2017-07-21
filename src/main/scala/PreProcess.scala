@@ -33,7 +33,7 @@ class PreProcess (input: String, stopwordFile: String, vocabSize: Int) {
     val (corpus, vocabArray, actualNumTokens) =
       preprocess(sc, input, vocabSize, stopwordFile, spark)
 
-    val min = if (vocabArray.length > 100) 100 else vocabArray.length;
+    val min = if (vocabArray.length > 50) 50 else vocabArray.length;
     val products:Array[JSONArray] = new Array[JSONArray](min)
     val pw = new PrintWriter(new File("data/significantWords.txt" ))
     for (x <- 1 until min+1){
