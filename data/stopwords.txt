@@ -255,3 +255,7 @@ youd
 youll
 youre
 youve
+also
+fig
+etc
+example
