@@ -23,12 +23,15 @@ public class FinalOutput {
         br1.close();
 
         BufferedWriter bw = new BufferedWriter(new FileWriter(new File("data/output.txt")));
+
         System.out.println("### Products and brands bases on relevance ###");
         for (Integer integer: cosineValuesSorted.keySet()){
             System.out.println(productCorpusList.get(integer));
             bw.write(productCorpusList.get(integer) + "\n");
+            bw.write("\n");
             System.out.println();
         }
+        bw.close();
     }
 
     public static <K, V extends Comparable<V>> Map<K, V> sortByValues(final Map<K, V> map) {

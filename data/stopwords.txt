@@ -258,5 +258,4 @@ youve
 also
 fig
 etc
-place
 example
